@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery -1 </title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <script>
+        $(document).ready(function () {
+            $(".p1").click(function () {
+                $("h3").hide(1000);
+                $(".h3").hide(3000);
+                $("#h3").hide(2000);
+                // $("h4").hide(2000);
+                $("button").hide(2000);
+            })
+
+            $("h4").dblclick(function () {
+                $("h3").show(3000);
+                $(".h3").show(2000);
+                $("#h3").show(1000);
+                $("button").show(1000);
+            })
+            $("button").click(function () {
+                $("h3").toggle(3000);
+                $(".h3").toggle(2000);
+                $("#h3").toggle(1000);
+                $(".p1").toggle();
+                $("h4").toggle();
+            })
+        })
+    </script>
+
+    <h3>The H3 TExt IS Hidden BY < p> TAg" On Click</h3>
+
+
+    <div class="h3">The Class .h3</div>
+    <div id="h3">The Id #h3</div>
+    <p class="p1">Click To Hide H3 Tag, #h3 And .h3 </p>
+
+    <h4>The Dblclick To Show All Hidden Element</h4>
+    <button>Toggle </button>
+
+
+
+</body>
+
+</html>

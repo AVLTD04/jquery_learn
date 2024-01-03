@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Remove Empty</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("#div1").remove();
+            });
+            $("#btn2").click(function () {
+                $("#div1").empty();
+            });
+        })
+    </script>
+
+    <div id="div1" style="height: 200px;width: 200px; border:1px solid blue;background-color: aquamarine;">
+        <p>The Data 1 </p>
+
+        <table border="2">
+            <tr>
+                <th>Box-1</th>
+                <th>Box-2</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+        </table>
+
+        <p>Some Other Data As Text</p>
+    </div>
+    <br>
+    <button id="btn2">empty</button>
+    <button id="btn1">Remove</button>
+
+</body>
+
+</html>

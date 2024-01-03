@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Ajax Post Method</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("input").keyup(function () {
+                var string = $("#search").val();
+
+                $.post("./find_customer.php",
+                    {
+                        str: string,
+                    },
+                    function (data) {
+                        $("#display").html(data);
+                    }
+                )
+            })
+        })
+    </script>
+</head>
+
+<body>
+
+    <label>Find Customer Name :-</label>
+    <input type="text" id="search" value="">
+    <!-- <button type="button">Find</button> -->
+
+    <div id="display"></div>
+</body>
+
+</html>

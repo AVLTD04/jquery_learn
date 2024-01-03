@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SET content</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <!-- Get text(), html() , val() AND attr(){href}  -->
+
+    <script>
+        $(document).ready(function () {
+            $("#shoval").click(function () {
+                $("#disp1").val("New Block");
+            })
+            $("#shoval2").click(function () {
+                $(".disp4").html("<b> Changes </b>");
+            })
+            $("#shoval3").click(function () {
+                + $(".disp3").text("Changed");
+            })
+            $("#linkattr").click(function () {
+                + $("#attr").attr("href", "https://www.google.com/history");
+            })
+        })
+    </script>
+
+    <p class="disp4">This is another paragraph.</p>
+    <p class="disp3">This is a paragraph.</p>
+
+    <p>Input field: <input type="text" id="disp1" value="Old Block"></p>
+    <p><a href="https://www.google.com" target="_blank" id="attr">Link Here</a></p>
+
+    <button id="shoval2">SET New HTML</button>
+    <button id="shoval3">SET New Text</button>
+    <button id="shoval">SET New VALUE</button>
+    <button id="linkattr">Set Attr</button>
+
+</body>
+
+</html>

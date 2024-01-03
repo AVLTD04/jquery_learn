@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <script>
+        $(document).ready(function(){
+            $("#button1").click(function(){
+                $(".c1").fadeIn(2000);
+                $(".c2").fadeIn(2000);
+                $(".c3").fadeIn(2000);
+                $("hr").hide();
+            })
+            $("#button2").click(function(){
+                $(".c1").fadeOut(2000);
+                $(".c2").fadeOut(2000);
+                $(".c3").fadeOut(2000);
+                $("#button1").hide();
+                $("hr").hide();
+            })
+            $("#button3").click(function(){
+                $(".c1").fadeToggle(2000);
+                $(".c2").fadeToggle(2000);
+                $(".c3").fadeToggle(2000); 
+                $("#button1").hide();
+                $("#button2").hide();
+                $("hr").hide();
+            })
+            $("#button4").click(function(){
+                $(".c1").fadeTo("slow",0.20);
+                $(".c2").fadeTo("slow",0.40);
+                $(".c3").fadeTo("slow",1.12); 
+                $("#button1").hide();
+                $("#button2").hide();
+                $("#button3").hide();
+                $("hr").hide();
+            })
+        })
+    </script>
+<br>
+<button id="button1">Click To Fade In</button>
+<hr>
+
+    <div class="c1" style="height: 40px ;display:none; width: 40px; background-color: aqua;"></div><br>
+    <div class="c2" style="height: 40px ;display:none; width: 40px; background-color: rgb(255, 42, 0);"></div><br>
+    <div class="c3" style="height: 40px ;display:none; width: 40px; background-color: rgb(26, 28, 194);"></div><br>
+
+    
+<hr>
+<button id="button2">Click To Fade OUT</button>
+<hr>
+<hr>
+<button id="button3">Click To Fade Toggle</button>
+<hr>
+<hr>
+<button id="button4">Click To Fade To</button>
+<hr>
+
+
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").hover(function () {
+                $("#block").slideDown(5000);
+            });
+            $("#btn2").hover(function () {
+                $("#block").slideUp(5000);
+            });
+            $("#btn11").click(function () {
+                $(".toggle").slideToggle(3000);
+            });
+            $("button").click(function () {
+                $("#block").stop();
+                $("toggle").stop();
+                alert("The Slider Has Been Stopped ");
+            });
+        });
+    </script>
+    <style>
+        #block,
+        .btns {
+            padding: 5px;
+            text-align: center;
+            background-color: lightblue;
+            border: solid 1px blue;
+        }
+
+        #block {
+            padding: 50px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="btns" id="btn1">Hover to slide down panel</div>
+    <div class="btns" id="btn2">Hover to slide UP panel</div>
+    <div id="block">Hello world!</div>
+
+    <hr>
+    <hr>
+    <button>Stop Process</button>
+    <hr>
+    <div class="btns" id="btn11">click to slide To Up & down panel</div>
+    <div class="toggle" id="block">Hello world!</div>
+
+    <hr>
+    
+</body>
+
+</html>

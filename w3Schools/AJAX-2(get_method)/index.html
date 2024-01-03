@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>calculations Using Get Ajax</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                var number1 = $("#value1").val();
+                var number2 = $("#value2").val();
+                var action = $("#action").val();
+
+                $.get("./process.php",
+                    {
+                        number1: number1,
+                        number2: number2,
+                        action: action
+                    },
+                    function (data) {
+                        $("#answer").html(data);
+                    })
+            });
+        })
+    </script>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-4">
+
+            </div>
+
+            <div class="col-4">
+
+                <div>Enter Value 1</div>
+                <input type="number" name="value1" id="value1" value="" required><br>
+                <div>Enter Value 2</div>
+
+                <input type="number" name="value2" id="value2" value="" required><br>
+
+                <div>Select Action </div>
+                <select name="action" id="action" required>
+                    <option value="0">-- Select --</option>
+                    <option value="+"> Addition (+)</option>
+                    <option value="-"> Subtraction (-)</option>
+                    <option value="*"> Multiplication (*)</option>
+                    <option value="/"> Division (/)</option>
+                    <option value="%"> Modular (%)</option>
+                </select>
+                <br>
+
+                <button type="submit" name="submit" value="submit" id="subm">Get Action</button>
+
+                <br><br>
+
+
+            </div>
+
+            <div class="col-4">
+                <div class=" alert alert-success">
+                    <b>The Answer Is ::</b>
+                    <div id="answer"></div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

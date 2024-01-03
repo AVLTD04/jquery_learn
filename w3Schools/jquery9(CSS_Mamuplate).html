@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Manuplate Class (Add-remove -Toggle)</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#add").click(function(){
+                $("p").addClass("styl1 styl2 styl3");
+            })
+            $("#remove").click(function(){
+                $("p").removeClass("styl1 styl3");
+            })
+            $("#toggle").click(function(){
+                $("h1,h2").toggleClass("styl1 styl2 styl3");
+            })
+        })
+    </script>
+
+    <style>
+        .styl1{
+            background-color: rgb(206, 23, 23);
+            color: rgb(102, 250, 255);
+        }
+        .styl2{
+            border: 2px solid blue;
+            border-radius: 5px;
+        }
+        .styl3{
+            font-size: medium;
+            font-weight: bolder;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <p>The Text Is On Change As Text Change !!</p>
+    <p>The ||||||||||||||||||||||||||||| Change !!</p>
+    <p>The ||||||||||||||||||||||||||||| Change !!</p>
+    <p>The Text Is On Change As Text Change !!</p>
+
+    <h1>The Block-1</h1>
+    <h2>the block-2</h2>
+
+
+    <button id="add">Add Class</button>
+    <button id="remove">Remove Class</button>
+    <button id="toggle">Toggle The Action</button>
+
+</body>
+
+</html>

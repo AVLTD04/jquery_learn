@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Conflict</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        
+        jQuery(document).ready(function () {
+            jQuery("div").hover(function () {
+                jQuery("p").text("Also JQuery Work Perfectly");
+            })
+            var jq = $.noConflict();
+            jq("button").click(function () {
+                jq("div").text("Hover Removed");
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <div>Hover Me</div>
+
+    <p>no Conflict Also Used JQuery,jq Inseted of $ </p>
+
+    <button>Do Change !!</button>
+</body>
+
+</html>

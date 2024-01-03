@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Data Filter </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#tab_btn").keyup(function () {
+                var string1 = $(this).val().toLowerCase();
+                $("#tabdata tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(string1) > -1);
+                })
+            })
+
+            $("#list_btn").keyup(function () {
+                var string2 = $(this).val().toLowerCase();
+                $("#listdata li").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(string2) > -1);
+                })
+            })
+            $("#doc_btn").keyup(function () {
+                var string3 = $(this).val().toLowerCase();
+                $(".container *").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(string3) > -1);
+                })
+            })
+        })
+    </script>
+</head>
+
+<body>
+
+
+
+
+
+
+    <div class="text-center">
+        <h1>Global Data Search </h1>
+        <label>Search For Whole document Data:: </label>
+        <input type="text" id="doc_btn">
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+
+                <h2>The Filter On Table </h2>
+
+                <label>Search For Table Data:: </label>
+                <input type="text" id="tab_btn">
+
+
+                <table border="3" class="table table-bordered">
+                    <thead>
+                        <th>id</th>
+                        <th>FName</th>
+                        <th>LName</th>
+                        <th>Email</th>
+                    </thead>
+
+                    <tbody id="tabdata">
+                        <tr>
+                            <td> 1 </td>
+                            <td> Jae </td>
+                            <td> Finlry </td>
+                            <td> jfinlry0@reuters.com </td>
+                        </tr>
+                        <tr>
+                            <td> 2 </td>
+                            <td> Clementine </td>
+                            <td> Coffee </td>
+                            <td> ccoffee1@nasa.gov </td>
+                        </tr>
+                        <tr>
+                            <td> 3 </td>
+                            <td> Marion </td>
+                            <td> Priddey </td>
+                            <td> mpriddey2@exblog.jp </td>
+                        </tr>
+                        <tr>
+                            <td> 4 </td>
+                            <td> Christabel </td>
+                            <td> Mauchlen </td>
+                            <td> cmauchlen3@mit.edu </td>
+                        </tr>
+                        <tr>
+                            <td> 5 </td>
+                            <td> Marcus </td>
+                            <td> McIlwrath </td>
+                            <td> mmcilwrath4@amazonaws.com </td>
+                        </tr>
+                        <tr>
+                            <td> 6 </td>
+                            <td> Tani </td>
+                            <td> Van Dale </td>
+                            <td> tvandale5@sohu.com </td>
+                        </tr>
+                        <tr>
+                            <td> 7 </td>
+                            <td> Emilio </td>
+                            <td> Heindrich </td>
+                            <td> eheindrich6@twitter.com </td>
+                        </tr>
+                        <tr>
+                            <td> 8 </td>
+                            <td> Anica </td>
+                            <td> Devoy </td>
+                            <td> adevoy7@hp.com </td>
+                        </tr>
+                        <tr>
+                            <td> 9 </td>
+                            <td> Kandace </td>
+                            <td> Bernocchi </td>
+                            <td> kbernocchi8@mail.ru </td>
+                        </tr>
+                        <tr>
+                            <td> 10 </td>
+                            <td> Jake </td>
+                            <td> Fifield </td>
+                            <td> jfifield9@wp.com </td>
+                        </tr>
+                        <tr>
+                            <td> 11 </td>
+                            <td> Horatius </td>
+                            <td> Searson </td>
+                            <td> hsearsona@etsy.com </td>
+                        </tr>
+                        <tr>
+                            <td> 12 </td>
+                            <td> Hanan </td>
+                            <td> Hawney </td>
+                            <td> hhawneyb@sciencedaily.com </td>
+                        </tr>
+                        <tr>
+                            <td> 13 </td>
+                            <td> Rhianon </td>
+                            <td> Cornick </td>
+                            <td> rcornickc@usgs.gov </td>
+                        </tr>
+                        <tr>
+                            <td> 14 </td>
+                            <td> Ewan </td>
+                            <td> Phillcox </td>
+                            <td> ephillcoxd@businessinsider.com </td>
+                        </tr>
+                        <tr>
+                            <td> 15 </td>
+                            <td> Mitchael </td>
+                            <td> Gergus </td>
+                            <td> mgerguse@bloomberg.com </td>
+                        </tr>
+                        <tr>
+                            <td> 16 </td>
+                            <td> Cirillo </td>
+                            <td> Mc Gaughey </td>
+                            <td> cmcgaugheyf@github.com </td>
+                        </tr>
+                        <tr>
+                            <td> 17 </td>
+                            <td> Clive </td>
+                            <td> Duffill </td>
+                            <td> cduffillg@sbwire.com </td>
+                        </tr>
+                        <tr>
+                            <td> 18 </td>
+                            <td> Torey </td>
+                            <td> MacCahey </td>
+                            <td> tmaccaheyh@gravatar.com </td>
+                        </tr>
+                        <tr>
+                            <td> 19 </td>
+                            <td> Halli </td>
+                            <td> Jauncey </td>
+                            <td> hjaunceyi@tamu.edu </td>
+                        </tr>
+                        <tr>
+                            <td> 20 </td>
+                            <td> Abbie </td>
+                            <td> Cheesworth </td>
+                            <td> acheesworthj@mac.com </td>
+                        </tr>
+                        <tr>
+                            <td> 21 </td>
+                            <td> Judie </td>
+                            <td> Outhwaite </td>
+                            <td> jouthwaitek@bandcamp.com </td>
+                        </tr>
+                        <tr>
+                            <td> 22 </td>
+                            <td> Dorella </td>
+                            <td> Najafian </td>
+                            <td> dnajafianl@barnesandnoble.com </td>
+                        </tr>
+                        <tr>
+                            <td> 23 </td>
+                            <td> Mag </td>
+                            <td> Carmel </td>
+                            <td> mcarmelm@cyberchimps.com </td>
+                        </tr>
+                        <tr>
+                            <td> 24 </td>
+                            <td> Jemmie </td>
+                            <td> Westoll </td>
+                            <td> jwestolln@squarespace.com </td>
+                        </tr>
+                        <tr>
+                            <td> 25 </td>
+                            <td> Shaylynn </td>
+                            <td> Marryatt </td>
+                            <td> smarryatto@go.com </td>
+                        </tr>
+                        <tr>
+                            <td> 26 </td>
+                            <td> Shela </td>
+                            <td> Yeoman </td>
+                            <td> syeomanp@yahoo.co.jp </td>
+                        </tr>
+                        <tr>
+                            <td> 27 </td>
+                            <td> Milissent </td>
+                            <td> Grabban </td>
+                            <td> mgrabbanq@comcast.net </td>
+                        </tr>
+                        <tr>
+                            <td> 28 </td>
+                            <td> Kessia </td>
+                            <td> Carpmile </td>
+                            <td> kcarpmiler@sitemeter.com </td>
+                        </tr>
+                        <tr>
+                            <td> 29 </td>
+                            <td> Cookie </td>
+                            <td> MacKellen </td>
+                            <td> cmackellens@arizona.edu </td>
+                        </tr>
+                        <tr>
+                            <td> 30 </td>
+                            <td> Katine </td>
+                            <td> Tassaker </td>
+                            <td> ktassakert@topsy.com </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-4">
+
+
+            </div>
+
+            <div class="col-4">
+                <h2>Filter On Listing</h2>
+
+                <label>Search For Listing Data:: </label>
+                <input type="text" id="list_btn">
+
+                <ul id="listdata">
+                    <li>First item</li>
+                    <li>Second item</li>
+                    <li>Third item</li>
+                    <li>Fourth</li>
+                    <li>Jae</li>
+                    <li>Clementine</li>
+                    <li>Marion</li>
+                    <li>Christabel</li>
+                    <li>Marcus</li>
+                    <li>Tani</li>
+                    <li>Emilio</li>
+                    <li>Anica</li>
+                    <li>Kandace</li>
+                    <li>Jake</li>
+                    <li>Horatius</li>
+                    <li>Hanan</li>
+                    <li>Rhianon</li>
+                    <li>Ewan</li>
+                    <li>Mitchael</li>
+                    <li>Cirillo</li>
+                    <li>Clive</li>
+                    <li>Torey</li>
+                    <li>Halli</li>
+                    <li>Abbie</li>
+                    <li>Judie</li>
+                    <li>Dorella</li>
+                    <li>Mag</li>
+                    <li>Jemmie</li>
+                    <li>Shaylynn</li>
+                    <li>Shela</li>
+                    <li>Milissent</li>
+                    <li>Kessia</li>
+                    <li>Cookie</li>
+                    <li>Katine</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+</body>
+
+</html>

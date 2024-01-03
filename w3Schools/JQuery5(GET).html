@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GET content</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <!-- Set Content - text(), html(), and val() AND attr(){href+ new link}  -->
+
+    <script>
+        $(document).ready(function () {
+            $("#shoval").click(function () {
+                alert("Value :" + $("#disp1").val());
+            })
+            $("#shoval2").click(function () {
+                alert("Value :" + $(".disp3").html());
+            })
+            $("#shoval3").click(function () {
+                alert("Value :" + $(".disp3").text());
+            })
+            $("#linkattr").click(function () {
+                alert("Value :" + $("#attr").attr("href"));
+            })
+        })
+    </script>
+
+    <p class="disp3">This is <b> another </b>paragraph.</p>
+
+    <p>Input field: <input type="text" id="disp1" value="Old Block"></p>
+    <p><a href="https://www.google.com" id="attr" target="_blank">Link Here</a></p>
+
+    <button id="shoval2">Get HTML</button>
+    <button id="shoval3">Get Text</button>
+    <button id="shoval">Get VALUE</button>
+    <button id="linkattr">Get Attr</button>
+</body>
+
+</html>

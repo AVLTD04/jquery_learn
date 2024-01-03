@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chainnning </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#id1").css("background-color", "yellow")
+                    .slideUp(2000)
+                    .slideDown(2000);
+            });
+        })
+    </script>
+
+    <div id="id1" >Block Text</div>
+    <button>Click To Slide Div</button>
+</body>
+
+</html>

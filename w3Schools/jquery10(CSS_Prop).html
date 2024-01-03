@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Properties And its Values</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+    <script>
+        $(document).ready(function(){
+            $("#styl1").hover(function(){
+                $("#styl1").css({"background-color": "blue", "color" : "red"});
+            })
+            $("#styl2").hover(function(){
+                $("#styl2").css({"background-color": "black", "color" : "white"});
+            })
+            $("#styl3").hover(function(){
+                $("#styl3").css({"background-color": "red", "color" : "yellow"});
+            })
+        })
+    </script>
+
+</head>
+<body>
+
+    <p id="styl1">The Text Block 1 For Ready To Change On Hover</p>
+    <p id="styl2">The Text Block 2 For Ready To Change On Hover</p>
+    <p id="styl3">The Text Block 3 For Ready To Change On Hover</p>
+</body>
+</html>

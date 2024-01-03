@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traversing-2</title>
+
+    <style>
+        .siblings * {
+            display: block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#act1").click(function () {
+                $("h2").siblings().css({ "color": "green", "border": "2px solid blue" });
+                // $("h2").siblings("p").css({ "color": "green", "border": "2px solid blue" });
+                $("button").not("#act1,#ref").hide();   // not instead of we can use first() last() and eq() also for this
+                
+            })
+
+            $("#act2").click(function () {
+                $("h2").next().css({ "color": "green", "border": "2px solid blue" });
+                $("button").not("#act2,#ref").hide();
+            })
+
+            $("#act3").click(function () {
+                $("h2").nextAll().css({ "color": "green", "border": "2px solid blue" });
+                $("button").not("#act3,#ref").hide();
+            })
+
+            $("#act4").click(function () {
+                $("h2").nextUntil().css({ "color": "green", "border": "2px solid blue" });
+                $("button").not("#act4,#ref").hide();
+            })
+
+            $("#act5").click(function () {
+                $("h2").prev().css({ "color": "green", "border": "2px solid blue" });
+                $("button").not("#act5,#ref").hide();
+            })
+
+            $("#act6").click(function () {
+                $("h2").prevAll().css({ "color": "green", "border": "2px solid blue" });
+                $("button").not("#act6,#ref").hide();
+            })
+
+            $("#act7").click(function () {
+                $("h2").prevUntil().css({ "color": "green", "border": "2px solid blue" });
+                $("button").not("#act7,#ref").hide();
+            })
+            $("#ref").click(function () {
+                location.reload(true);
+            })
+
+
+        });
+    </script>
+</head>
+
+<body>
+
+
+    <!-- 
+        ???
+        /**********************************
+        *
+        *   Traversing Sideways Is CaLled :  Siblings
+        *   Traversing Filter .....
+        *
+        *
+    
+    -->
+
+    <div class="siblings">
+        color blue are action H2 Element of color grey And Also <br>
+        <p>p</p>
+        <span>span</span>
+        <h2>h2</h2>
+        <h3>h3</h3>
+        <p>p</p>
+    </div>
+
+    <button id="ref">Reload</button>
+    <button id="act1">siblings()</button>
+    <button id="act2">next()</button>
+    <button id="act3">nextAll()</button>
+    <button id="act4">nextUntil()</button>
+    <button id="act5">prev()</button>
+    <button id="act6">prevAll()</button>
+    <button id="act7">prevUntil()</button>
+
+</body>
+
+</html>

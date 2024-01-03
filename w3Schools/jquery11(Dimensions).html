@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery Dimensions</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#dim1").click(function () {
+                var txt = "";
+                txt += "Window Width: " + $(window).width() + "</br>";
+                txt += "Window Height: " + $(window).height() + "</br>";
+                txt += "Window Inner width: " + $(window).innerWidth() + "</br>";
+                txt += "Window Inner height: " + $(window).innerHeight() + "</br>";
+                txt += "Window Outer width: " + $(window).outerWidth() + "</br>";
+                txt += "Window Outer height: " + $(window).outerHeight() + "</br>";
+                txt += "Window Outer width (+margin): " + $(window).outerWidth(true) + "</br>";
+                txt += "Window Outer height (+margin): " + $(window).outerHeight(true);
+
+                $("#div1").html(txt);
+            })
+            $("#dim2").click(function () {
+                var txt = "";
+                txt += "Document Width: " + $(document).width() + "</br>";
+                txt += "Document Height: " + $(document).height() + "</br>";
+                txt += "Document Inner width: " + $(document).innerWidth() + "</br>";
+                txt += "Document Inner height: " + $(document).innerHeight() + "</br>";
+                txt += "Document Outer width: " + $(document).outerWidth() + "</br>";
+                txt += "Document Outer height: " + $(document).outerHeight() + "</br>";
+                txt += "Document Outer width (+margin): " + $(document).outerWidth(true) + "</br>";
+                txt += "Document Outer height (+margin): " + $(document).outerHeight(true);
+
+                $("#div1").html(txt);
+            })
+            
+            $("#divresize").click(function () {
+                $("#div1").width(120).height(150);
+            });
+
+            $("#dim3").click(function () {
+                var txt = "";
+                txt += "Div Width: " + $("#div1").width() + "</br>";
+                txt += "Div Height: " + $("#div1").height() + "</br>";
+                $("#div1").html(txt);
+            })
+        })
+    </script>
+
+    <style>
+        #div1 {
+            height: 100px;
+            width: 300px;
+            padding: 10px;
+            margin: 3px;
+            background-color: rgb(88, 136, 79);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        
+    </div>
+    <p id="div1"></p>
+
+    <button id="dim1">Click To See Window All Dimensions</button>
+    <button id="dim2">Click To See Document All Dimensions</button>
+    <button id="dim3">Click To See Div (hxw)</button>
+    <button id="divresize">Resize div (120x150)</button>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traversing</title>
+
+    <style>
+
+
+        .ancestors * {
+            display: block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 15px;
+            text-align: center;
+        }
+
+        .descendants * {
+            display: block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 15px;
+        }
+
+        
+    </style>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("span").parent().css({ "color": "grey", "border": "2px solid green" });
+            $("span").parentsUntil("div").css({ "color": "red", "border": "2px solid red" });
+
+            $(".descendants").children("div.first").css({ "color": "red", "border": "2px solid red" });  /* .first .last and .eq */
+            $(".descendants").find("p").css({ "color": "red", "border": "2px solid red" }); /* We cAn also use find("*")  to find all elements */
+
+        });
+    </script>
+</head>
+
+<body>
+
+
+    <!-- 
+        ???
+        /**********************************
+        *
+        *   Traversing Up       Is CaLled :  Ancestors
+        *   Traversing Down     Is CaLled :  Descendants
+        *   Traversing Sideways Is CaLled :  Siblings
+        *
+        *   Traversing Filter .....
+        *
+        *
+    
+    -->
+
+    <div class="ancestors">
+
+        body (great-great-grandparent)
+
+        <div style="width:500px;">div (great-grandparent)
+            <ul>ul (grandparent)
+                <li>li (direct parent)
+                    <span>span</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="descendants">
+
+        body
+
+        <div style="width:500px;">div (great-child of body)
+            <ul>ul (child of div)
+                <li>
+                    <span>span li (direct child of li)</span>
+                    <p>The data Smallest </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    
+
+</body>
+
+</html>
