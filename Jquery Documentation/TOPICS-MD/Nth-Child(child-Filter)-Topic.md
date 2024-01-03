@@ -188,40 +188,7 @@ here:
 </table>
 </figure>
 
-### <a href="#aa-browser-support" id="aa-browser-support" class="aal_anchor"
-aria-hidden="true"><img
-src="data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9ImFhbF9zdmciIGhlaWdodD0iMTYiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYiPgogICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00IDloMXYxSDRjLTEuNSAwLTMtMS42OS0zLTMuNVMyLjU1IDMgNCAzaDRjMS40NSAwIDMgMS42OSAzIDMuNSAwIDEuNDEtLjkxIDIuNzItMiAzLjI1VjguNTljLjU4LS40NSAxLTEuMjcgMS0yLjA5QzEwIDUuMjIgOC45OCA0IDggNEg0Yy0uOTggMC0yIDEuMjItMiAyLjVTMyA5IDQgOXptOS0zaC0xdjFoMWMxIDAgMiAxLjIyIDIgMi41UzEzLjk4IDEyIDEzIDEySDljLS45OCAwLTItMS4yMi0yLTIuNSAwLS44My40Mi0xLjY0IDEtMi4wOVY2LjI1Yy0xLjA5LjUzLTIgMS44NC0yIDMuMjVDNiAxMS4zMSA3LjU1IDEzIDkgMTNoNGMxLjQ1IDAgMy0xLjY5IDMtMy41UzE0LjUgNiAxMyA2eiI+CiAgICAgICAgICAgICAgICAgICAgICAgIDwvcGF0aD4KICAgICAgICAgICAgICAgICAgICA8L3N2Zz4="
-class="aal_svg" /></a>Browser support
 
-<table class="browser-support-table">
-<thead>
-<tr class="header">
-<th class="chrome">Chrome</th>
-<th class="safari">Safari</th>
-<th class="firefox">Firefox</th>
-<th class="opera">Opera</th>
-<th class="ie">IE</th>
-<th class="android">Android</th>
-<th class="iOS">iOS</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td class="yep" data-browser-name="Chrome">Any</td>
-<td class="yep" data-browser-name="Safari">3.2+</td>
-<td class="yep" data-browser-name="Firefox">Any</td>
-<td class="yep" data-browser-name="Opera">9.5+</td>
-<td class="yep" data-browser-name="IE">9+</td>
-<td class="yep" data-browser-name="Android">Any</td>
-<td class="yep" data-browser-name="iOS">Any</td>
-</tr>
-</tbody>
-</table>
-
-### <a href="#aa-still-not-getting-it" id="aa-still-not-getting-it"
-class="aal_anchor" aria-hidden="true"><img
-src="data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9ImFhbF9zdmciIGhlaWdodD0iMTYiIHZlcnNpb249IjEuMSIgdmlld2JveD0iMCAwIDE2IDE2IiB3aWR0aD0iMTYiPgogICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00IDloMXYxSDRjLTEuNSAwLTMtMS42OS0zLTMuNVMyLjU1IDMgNCAzaDRjMS40NSAwIDMgMS42OSAzIDMuNSAwIDEuNDEtLjkxIDIuNzItMiAzLjI1VjguNTljLjU4LS40NSAxLTEuMjcgMS0yLjA5QzEwIDUuMjIgOC45OCA0IDggNEg0Yy0uOTggMC0yIDEuMjItMiAyLjVTMyA5IDQgOXptOS0zaC0xdjFoMWMxIDAgMiAxLjIyIDIgMi41UzEzLjk4IDEyIDEzIDEySDljLS45OCAwLTItMS4yMi0yLTIuNSAwLS44My40Mi0xLjY0IDEtMi4wOVY2LjI1Yy0xLjA5LjUzLTIgMS44NC0yIDMuMjVDNiAxMS4zMSA3LjU1IDEzIDkgMTNoNGMxLjQ1IDAgMy0xLjY5IDMtMy41UzE0LjUgNiAxMyA2eiI+CiAgICAgICAgICAgICAgICAgICAgICAgIDwvcGF0aD4KICAgICAgICAgICAgICAgICAgICA8L3N2Zz4="
-class="aal_svg" /></a>Still not getting it?
 
 I’m not a big fan of the phrase “I’m a visual learner.” Of course you
 are, everybody is. Visual aids are enormously helpful in situations just
