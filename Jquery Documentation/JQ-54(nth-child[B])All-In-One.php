@@ -39,10 +39,6 @@
 <body>
 
 
-
-
-
-
   <h3>Nth Child</h3>
   <div>
     <button>:nth-child(even)</button>
