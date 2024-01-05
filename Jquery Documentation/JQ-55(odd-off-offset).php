@@ -103,7 +103,7 @@
         $(".oddblock2 :odd").css("color", "blue");
         /*************************************************************************************/
 
-        /*************************** .off()  Remove Trigger Ability [Opposite Of on(),delegate() trigger Events **************************/
+        /*************************** .off()  Remove Trigger Ability [Opposite Of bind(),on(),delegate() trigger Events **************************/
         $(".qw").on("click", function() {
             $(this).toggleClass("qw");
         });
